@@ -9,11 +9,6 @@
       dnf:
         update_cache: yes
 
-    - name: Install EPEL repository
-      dnf:
-        name: epel-release
-        state: present
-
     - name: Install HTTPD
       dnf:
         name: httpd
