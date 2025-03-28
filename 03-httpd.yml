@@ -1,21 +1,30 @@
 # ansible N1 -m file -a "path/home/ec2-user/ all_dir state=directory"
 ---
-- name: Install HTTP servers
+- name: Install and Configure HTTPD on N2
   hosts: N2
   become: yes
+
   tasks:
-    - name: Install HTTPD
+    - name: Update DNF cache
       dnf:
-        name: HTTPD
+        update_cache: yes
+
+    - name: Install EPEL repository
+      dnf:
+        name: epel-release
         state: present
 
-    - name: start HTTPD
+    - name: Install HTTPD
+      dnf:
+        name: httpd
+        state: present
+
+    - name: Start HTTPD
       service:
         name: httpd
         state: started
 
-
-    - name: enable and start HTTPD
+    - name: Enable and start HTTPD
       service:
         name: httpd
         enabled: yes
