@@ -1,5 +1,5 @@
 ---
-- name: Deploy Maintenance Page on server
+- name: under maintenance 
   hosts: N2
   become: yes
 
@@ -8,3 +8,4 @@
       copy:
         src: file/maintenance.html
         dest: /var/www/html/index.html
+...       
