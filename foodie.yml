@@ -1,0 +1,17 @@
+---
+- name: Deploy Web App
+  hosts: n2
+  become: yes
+
+  tasks:
+  - name: Install Git
+    dnf:
+      name: git
+      state: present
+
+  - name: Host code
+    git:
+      repo: https://github.com/EssEbigwei/ansible-work-7.git
+      dest: /var/www/html
+
+...
