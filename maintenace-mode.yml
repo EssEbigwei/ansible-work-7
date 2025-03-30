@@ -1,5 +1,5 @@
 ---
-- name: Deploy Maintenance Page
+- name: Deploy Maintenance Page on server
   hosts: N2
   become: yes
 
