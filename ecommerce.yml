@@ -1,6 +1,6 @@
 ---
 - name: Deploy Web App
-  hosts: N2
+  hosts: N1
   become: yes
 
   tasks:
@@ -11,6 +11,6 @@
 
     - name: host code
       git:
-        repo: https://github.com/EssEbigwei/ansible-work-7.git
+        repo: https://github.com/CeeyIT-Solutions/ecomm-3.git
         dest: /var/www/html
 ...

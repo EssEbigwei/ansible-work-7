@@ -1,0 +1,11 @@
+---
+- name: Deploy Maintenance Page
+  hosts: N2
+  become: yes
+
+  tasks:
+    - name: update maintenance page
+      copy:
+        src: maintenance.html
+        dest: /var/www/html/index.html
+---
