@@ -6,6 +6,6 @@
   tasks:
     - name: update maintenance page
       copy:
-        src: file/maintenance.html
+        src: maintenance.html
         dest: /var/www/html/index.html
 ...       
