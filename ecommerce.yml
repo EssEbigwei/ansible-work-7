@@ -5,7 +5,7 @@
 
   tasks:
     - name: Install Git
-      yum:
+      dnf:
         name: git
         state: present
 
