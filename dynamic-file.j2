@@ -1,9 +1,10 @@
 <html>
     <body>
         <center>
-        <h1>The Server Operating System : {{ ansible_distribution }} </h1>
-        <br>
-        <h1>The Server Hostname : {{ ansible_hostname }} </h1>
-    </center>
+            <h1>Operating System : {{ ansible_distribution }} </h1>
+            <br>
+            <h2>Hostname : {{ ansible_hostname }} </h2>
+            <h2>Administrator : {{ myusername }} </h2>
+        </center>
     </body>
 </html>
