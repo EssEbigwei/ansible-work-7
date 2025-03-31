@@ -1,0 +1,23 @@
+# ansible N1 -m file -a "path/home/ec2-user/ all_dir state=directory"
+---
+- name: Install HTTP server
+  hosts: n1
+  become: yes
+
+  tasks:
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: present
+
+    - name: Start apache2
+      service:
+        name: apache2
+        state: started
+
+    - name: Enable Apache2
+      service:
+        name: apache2
+        enabled: yes
+        state: started
+...
