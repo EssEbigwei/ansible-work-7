@@ -1,0 +1,13 @@
+---
+- name: variable testing
+  hosts: g1
+  become: yes
+  vars:
+    myusername: Ess
+
+  tasks:
+   - name: Update page
+     template:
+       src: dynamic-file.j2
+       dest: /var/www/html/dynamic-file.html
+...
